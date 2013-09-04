@@ -1,0 +1,38 @@
+%
+% cfk.tex -- A simple look and feel for LaTeX documents
+% Christian Koch <cfkoch@sdf.lonestar.org>
+%
+% Just copy and include this file in your next LaTeX project: \include{cfk}
+% Set the documentclass to ``article,'' then call \cfk in the preamble.
+% That's it!
+%
+
+% Performs all sorts of setup. Call this in the preamble.
+\newcommand{\cfk}[0]{
+  \usepackage[paperwidth=8.5in, paperheight=11in, margin=1in]{geometry}
+  \usepackage{framed}
+  \renewcommand*{\familydefault}{\sfdefault}
+  \pagestyle{myheadings}
+  \normalsize
+  \parindent 0in
+  \parskip 12pt
+}
+
+% Takes three arguments: The title, the author and the date.
+\newcommand{\cfktitle}[3]{
+  {\Huge \bf #1}
+
+  #2\\
+  #3\\
+
+  \hrule
+}
+
+% Corresponds to HTML's ``H1.''
+\newcommand{\cfkone}[1]{{\LARGE \bf #1}}
+
+% Corresponds to HTML's ``H2.''
+\newcommand{\cfktwo}[1]{{\Large \bf #1}}
+
+% Corresponds to HTML's ``H3.''
+\newcommand{\cfkthree}[1]{{\large \bf #1}}
