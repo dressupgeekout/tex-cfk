@@ -11,8 +11,19 @@
 \newcommand{\cfk}[0]{
   \usepackage[paperwidth=8.5in, paperheight=11in, margin=1in]{geometry}
   \usepackage{framed}
+  \usepackage{fancyhdr}
+  \usepackage{lastpage}
   \renewcommand*{\familydefault}{\sfdefault}
-  \pagestyle{myheadings}
+
+  % If you don't want a page count:
+  \pagestyle{myheadings} 
+
+  % Otherwise:
+  %\pagestyle{fancy}
+  %\renewcommand{\headrulewidth}{0pt}
+  %\fancyhead[EOR]{\thepage/\pageref{LastPage}}
+  %\fancyfoot[EOLRC]{}
+
   \normalsize
   \parindent 0in
   \parskip 12pt
